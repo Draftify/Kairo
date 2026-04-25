@@ -15,13 +15,8 @@ export async function connectProducer() {
 
 export async function sendMessage(topic: string, message: unknown) {
   if (!isConnected) throw new Error("Producer is not connected");
-
-  try {
-    await producer.send({
-      topic,
-      messages: [{ value: JSON.stringify(message) }],
-    });
-  } catch (error) {
-    throw error;
-  }
+  await producer.send({
+    topic,
+    messages: [{ value: JSON.stringify(message) }],
+  });
 }

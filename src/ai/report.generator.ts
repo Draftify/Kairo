@@ -22,15 +22,8 @@ const agent = createAgent({
 
 export async function generateReport(events: unknown[]): Promise<string> {
   logger.info(`Generating AI report for ${events.length} events...`);
-
-  try {
-    const result = await agent.invoke({
-      messages: [{ role: "user", content: REPORT_USER_PROMPT(events) }],
-    });
-
-    const report = extractReport(result.messages as BaseMessage[]);
-    return report;
-  } catch (error) {
-    throw error;
-  }
+  const result = await agent.invoke({
+    messages: [{ role: "user", content: REPORT_USER_PROMPT(events) }],
+  });
+  return extractReport(result.messages as BaseMessage[]);
 }

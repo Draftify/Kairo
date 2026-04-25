@@ -13,7 +13,11 @@ export async function startConsumer(topic: string) {
     eachMessage: async ({ message }) => {
       try {
         const value = message.value?.toString();
-        const parsed = JSON.parse(value || "{}");
+        if (!value) {
+          logger.warn("Empty Kafka message received, skipping");
+          return;
+        }
+        const parsed = JSON.parse(value);
         await enqueueEvent(parsed);
       } catch (error) {
         logger.error(
