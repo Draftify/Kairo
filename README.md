@@ -139,3 +139,15 @@ Each report is structured as:
 
 **Bottom Line:** ...
 ```
+
+## Testing
+
+In sha'Allah, the test code will be released within the next couple of months, as we continue to work diligently on its development.
+
+## Contributing
+
+If you would like to contribute to this, please open an issue on GitHub to discuss your ideas or proposed changes. Pull requests are also welcome.
+
+## License
+
+This is available under the MIT License. You are free to use, modify, and distribute this project as you see fit.
