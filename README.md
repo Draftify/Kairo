@@ -78,3 +78,64 @@ git clone https://github.com/Draftify/Kairo.git
 cd Kairo
 bun install
 ```
+
+## Configuration Guide: Environment & Kafka Integration
+
+Here is the example .env file that you need to create in the root of the project.
+```bash
+PORT=9070
+
+KAFKA_BROKER=
+KAFKA_PORT=
+KAFKA_USERNAME=
+KAFKA_PASSWORD=
+
+KAFKA_CLIENT_ID=kairo
+KAFKA_GROUP_ID=kairo-group
+
+SIMULATION_ENABLED=false/true
+
+REDIS_URL=
+
+REPORT_INTERVAL_MINUTES= 
+
+OPENAI_MODEL=
+OPENAI_API_KEY=
+
+BATCH_LIMIT=15
+```
+Kairo requires a CA certificate to establish a TLS connection to Kafka. Place it at:
+
+```bash
+cert/ca.pem
+```
+## Running the Application: Development and Production
+**Development** (with watch mode):
+```bash
+bun dev
+```
+
+**Production**:
+```bash
+bun run build
+bun start
+```
+## Reports
+
+Generated reports are saved to the `./reports/` directory as markdown files:
+
+```
+reports/
+  report-2026-04-26T04-22-27-472Z.md
+  report-2026-04-26T04-27-27-891Z.md
+```
+
+Each report is structured as:
+
+```markdown
+## Summary — *what just happened*
+## Key Metrics — *the numbers that matter*
+## Anomalies & Warnings — *what needs eyes on it now*
+
+**Bottom Line:** ...
+```
