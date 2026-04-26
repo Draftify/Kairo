@@ -17,7 +17,7 @@
 5. [Installation](#installation)
 6. [Configuration Guide: Environment & Kafka Integration](#configuration-guide-environment--kafka-integration)
 7. [Running the Application: Development and Production](#running-the-application-development-and-production)
-8. [Reports](#reports)
+8. [Reports (screenshot attached)](#reports)
 9. [Testing](#testing)
 10. [Integration with Communication Channels](#integration-with-communication-channels)
 11. [Contributing](#contributing)
@@ -156,7 +156,7 @@ Each report is structured as:
 ```
 Example Report Screenshot: 
 
-<img width="1954" height="728" alt="screenshot" src="https://github.com/user-attachments/assets/3f6c65d4-4b85-4e7d-a8c9-1372fcf69e16" />
+<img width="1954" height="624" alt="screenshot" src="https://github.com/user-attachments/assets/a2665ca9-f41a-444b-9f48-1385c0e4e824" />
 
 ## Integration with Communication Channels
 
