@@ -8,6 +8,20 @@
   It is built with Bun and TypeScript, and is designed to run as a single long-lived backend service.
 </p>
 
+## Table of Contents
+
+1. [Features](#features)
+2. [Project Structure](#project-structure)
+3. [Tech Stack](#tech-stack)
+4. [Prerequisites](#prerequisites)
+5. [Installation](#installation)
+6. [Configuration Guide: Environment & Kafka Integration](#configuration-guide-environment--kafka-integration)
+7. [Running the Application: Development and Production](#running-the-application-development-and-production)
+8. [Reports](#reports)
+9. [Testing](#testing)
+10. [Contributing](#contributing)
+11. [License](#license)
+
 ## Features
 
 - Real-time Kafka event consumption with SASL/SCRAM-SHA-256 + TLS authentication
