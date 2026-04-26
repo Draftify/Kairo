@@ -3,8 +3,10 @@ import { kafka } from "./kafka";
 import { config } from "../../config/config";
 import { enqueueEvent } from "../redis/queue";
 
-export async function startConsumer(topic: string) {
-  const consumer = kafka.consumer({ groupId: config.kafka.groupId });
+let consumer: ReturnType<typeof kafka.consumer> | null = null;
+
+export async function startConsumer(topic: string): Promise<void> {
+  consumer = kafka.consumer({ groupId: config.kafka.groupId });
   await consumer.connect();
   logger.info(`Consumer connected successfully on topic: ${topic}`);
   await consumer.subscribe({ topic, fromBeginning: true });
@@ -26,4 +28,9 @@ export async function startConsumer(topic: string) {
       }
     },
   });
+}
+
+export async function disconnectConsumer(): Promise<void> {
+  await consumer?.disconnect();
+  logger.info("Kafka Consumer disconnected successfully");
 }

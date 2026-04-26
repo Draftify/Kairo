@@ -24,7 +24,9 @@ export const config = {
     label: {
       store: "ai:batch:queued",
       processing: "ai:batch:processing",
+      failed: "ai:batch:failed",
     },
+    retries: 3,
     batchLimit: env.BATCH_LIMIT,
   },
 
