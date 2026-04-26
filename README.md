@@ -19,8 +19,9 @@
 7. [Running the Application: Development and Production](#running-the-application-development-and-production)
 8. [Reports](#reports)
 9. [Testing](#testing)
-10. [Contributing](#contributing)
-11. [License](#license)
+10. [Integration with Communication Channels](#integration-with-communication-channels)
+11. [Contributing](#contributing)
+12. [License](#license)
 
 ## Features
 
@@ -153,6 +154,25 @@ Each report is structured as:
 
 **Bottom Line:** ...
 ```
+Example Report Screenshot: 
+
+<img width="1954" height="728" alt="screenshot" src="https://github.com/user-attachments/assets/3f6c65d4-4b85-4e7d-a8c9-1372fcf69e16" />
+
+## Integration with Communication Channels
+
+You can integrate Kairo to post the generated reports directly to communication channels such as Microsoft Teams, Discord, Slack, or any custom webhook.
+
+**How it Works:**
+
+1. **Create a Function**:  
+   First, create a function that handles communication with the desired service (e.g., Teams, Discord, Slack, or a custom webhook). This function should be configured with the necessary API keys or credentials for the respective service. 
+
+2. **Configure API Keys and Credentials**:  
+   Ensure that you configure the necessary API keys or credentials in your environment variables or config files. For example, you'll need:
+   - A **Slack Incoming Webhook URL** for Slack.
+   - A **Teams Webhook URL** for Microsoft Teams.
+   - A **Discord Webhook URL** for Discord.
+   - The appropriate authentication method or endpoint for any custom webhooks.
 
 ## Testing
 
