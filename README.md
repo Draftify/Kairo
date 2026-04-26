@@ -50,3 +50,31 @@
 └── util/
     └── extract.report.ts        # Extracts text from LangChain messages
 ```
+
+## Tech stack
+
+- **[Bun](https://bun.sh)** — runtime and package manager
+- **[KafkaJS](https://kafka.js.org)** — Kafka producer and consumer
+- **[node-redis](https://github.com/redis/node-redis)** — Redis client
+- **[LangChain](https://langchain.com)** — AI agent orchestration
+- **[OpenAI](https://openai.com)** — report generation model
+- **[node-cron](https://github.com/node-cron/node-cron)** — report scheduling
+- **[Zod](https://zod.dev)** — runtime environment validation
+- **[Pino](https://getpino.io)** — structured JSON logging
+- **[TypeScript](https://www.typescriptlang.org)** — strict mode enabled
+
+## Prerequisites
+
+- [Bun](https://bun.sh) v1.0 or higher
+- A running Kafka broker with SASL/SCRAM-SHA-256 + TLS
+- A running Redis instance with TLS
+- An OpenAI API key
+- A Kafka CA certificate at `cert/ca.pem`
+
+## Installation
+
+```bash
+git clone https://github.com/Draftify/Kairo.git
+cd Kairo
+bun install
+```
